@@ -1,0 +1,29 @@
+print("Welcome to the tip calculator!") # Greetings
+bill = float(input("What was the total bill? $")) #Takes user input. Turns number into a float.
+tip = int(input("What percentage tip would you like to give? 10 12 15 ")) # Turns input into integer
+people = int(input("How many people to split the bill? ")) # Turns input into integer
+
+# Solution 1:
+# tip /= 100   # This will give me .12. I need to turn it into 1.12
+# tip += 1
+# bill /= people
+# bill *= tip
+# bill = round(bill, 2)
+# print(f"Your split is ${bill} per person!")
+# Yeah, I give up. I have no idea how to make it say 33.60 in this case.
+
+# Solution 2:
+final_amount = round((bill / people) * ((tip / 100) + 1), 2)
+print(f"Each person should pay: ${final_amount}")
+
+# Final Solution (Angela's):
+# tip_as_percentage = tip / 100 # 0.12
+# total_tip = bill * tip_as_percentage # 18
+# total_bill = bill + total_tip # 168
+# bill_per_person = total_bill / people # 33.6
+# final_amount = round(bill_per_person, 2)
+# print(f"Each person should pay: ${final_amount}!")
+
+# This is pretty much how the solution has it. And I ran that to compare. They both give off 33.6
+# I guess I already got this right 3-4 times and pycharm was messing with me.......
+# Honestly, kinda happy. I got it in one line of code.
