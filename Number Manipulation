@@ -1,0 +1,65 @@
+bmi = 84 / 1.65 ** 2
+print(bmi)
+
+print(int(bmi)) # With the given equation, this will cause flooring to the number below (30).
+print(round(bmi)) # This will round to the closer whole integer. In this case, 30.85~ will go to 31.
+
+bmi2 = 5.2/2 # Trying with different numbers.
+print(bmi2) # This will produce 2.6.
+print(int(bmi2)) # This will FLOOR to 2.
+print(round(bmi2)) # This will ROUND to 3.
+# Rounding can actually hold two values. You can have it so the function rounds to the next
+# closest decimal instead of the next whole. Let's use bmi again.
+
+print(round(bmi, 2)) # With this, you will round the result to the second decimal point. 30.85.
+
+# Score starts off at 0
+score = 0
+print(score)
+
+# User scores a point
+score = score + 1 # Instead of typing things out like this, you can use the below assignment operator
+print(score)
+
+# User scores another
+score += 1 # this is a shorthand version. With the current program, the result should be 2.
+print(score)
+
+score -= 1 # You can also subtract using -= instead of = -1. This will produce 1.
+print(score)
+
+score /= 1 # Division too using /= instead of = / 1. This will produce 1.0 due to division
+print(score)
+
+score *= 1 # Multiplication using *= instead of = * 1. This will still produce 1.0 because of the
+# previous one.
+print(score)
+
+# You're going to have to manipulate values a lot in programming so it helps to know how.
+
+#print("Your score is " + score) This will fail because of a typeerror. Can only concatenate
+# strings with strings. Not strings and floats or integers.
+
+print("Your score is " + str(score)) # This should succeed because both are strings now.
+
+#f-strings
+
+# Sometimes we'll have too many variables, and we'll want to make it easy to combine them without
+# necessarily having to convert every little thing into a string. Take for the example:
+
+score = 0 # an integer
+height = 1.8 # a float
+is_winning = True # a boolean
+# We'll want to print a message with a string
+# print("")
+# To combine all of these, we'd need to convert them all and concatenate things and that can be
+# a tad tedious
+# To perform an f-string, you want to add an f before the string. And now...
+print(f"Your score is = {score}") # Including those curly braces will ensure that the converting
+# is done for you and you don't have to do any type conversions yourself.
+print(f"Your height is {height}, your score is {score}, and you are winning is {is_winning}")
+# There you have it. You've included a string, integer, float, and boolean in one line.
+# Cut down on a lot of the manual labor in inserting all these different data types.
+
+age = 12
+print(f"You are {age} years old")
