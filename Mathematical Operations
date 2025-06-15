@@ -1,0 +1,45 @@
+print("My age: " + str(12)) # string concatenate with string
+print(123 + 456) # int adds up with another int
+print(123 + 456.5) # int adds up with a float
+print(7 - 3) # int subtracts from another int
+print(3 * 2) # we use * instead of x to denote multiplication in programming. Int x Int
+print(type(6 / 3)) # Int divided by another Int. Note the decimal.
+print(type(6 // 3)) # This is another divider operand you can use to turn it into an integer instead.
+print(5 / 3)
+print(5 // 3) # This line actually processes the above first then removes the decimal.
+print(2**3) # This is 2^x
+# Remember PEMDAS from high school because it still applies here
+# ()
+# **
+# * OR /
+# + OR -
+# Calculations are prioritized in this order. The leftmost ones go first. Can use PEMDASLR for ref
+
+print(3 * 3 + 3 / 3 - 3)
+# What will be calculated here first?
+# So let's break it down.
+# () is what will first be resolved which in this case is the entire equation.
+# Next is exponents but there is nothing to the power of anything here so moving on...
+# Multiplication and division. In this case, Multiplication would take priority as it's leftmost
+# 3x3 = 9. print(9 + 3 / 3 - 3)
+# Next is the division. 3/3 is just 1. So print(9 + 1 - 3)
+# Finally we have the addition which is leftmost again so that's 10 MINUS 3.
+# This should yield a result of 7.
+# Specifically 7.0 as there was division involved, turning it into a float.
+print(type(3 * 3 + 3 / 3 - 3))
+
+# Now change it so this produces a 3 instead of a 7.0
+print(int(3 * 3 + 3 / 3 - 7))
+# Not sure if this was the intended solution, but that would do the job, I think.
+# I merely replaced the 3 at the end with a 7 so that it would be 10 MINUS 7 giving a result of 3.0
+# I also added the int data type conversion in case the question asked specifically for that.
+print(type(int(3 * 3 + 3 / 3 - 7)))
+# Here's the method I should have used
+print(int(3 * (3 + 3) / 3 - 3))
+# So now it'll print(3 * 6 / 3 - 3)
+# 18 / 3 will give us 6.
+# 6 - 3 will give us 3.
+# Run and copy results.
+print(type(int(3 * (3 + 3) / 3 - 3)))
+# I believe because this is a whole number, it is an integer.
+# One simple change beats doing the math in your head, you know?
