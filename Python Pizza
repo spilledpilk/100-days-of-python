@@ -1,0 +1,52 @@
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M or L: ")
+pepperoni = input("Do you want pepperoni on your pizza? Y or N: ")
+extra_cheese = input("Do you want extra cheese? Y or N: ")
+price = 0
+
+
+if size == "S":
+    price = 15      #+= would have been okay here too. We're going to be using it a lot.
+elif size == "M":
+    price = 20    # This is the same as assigning and overwriting the value of price
+# else:
+#     price = 25
+# Here we can actually replace the above else statement with elif and create a fail safe else.
+elif size == "L":
+    price = 25
+else:
+    print("You typed the wrong inputs.")
+
+
+# # print(f"Current price is {price}") - Checking my work. Good so far.
+# if price > 15:
+#     if pepperoni == "Y":
+#         price += 3    # This is the same as saying +3 to the value of the previous bill
+#     else:
+#         price += 0
+# if price == 15:
+#     if pepperoni == "Y":
+#         price += 2
+#     else:
+#         price +=0
+# # print(price) - Another check. Got the pepperoni down.
+# Below is an alternative way to do it in a nested if statement
+
+if pepperoni == "Y":
+    if size == "S":
+        price += 2
+    else:
+        price += 3
+
+
+
+if extra_cheese == "Y":
+    price += 1
+# else:
+#     price += 0
+# Again, the else statement is actually unnecessary here. The else is implied.
+# If you select N, you will already not add anything to the price because it is not Y.
+# Makes no real difference if you have this else or not.
+
+print(f"Your final bill is: ${price}.")
+# Final check. This is all good now. The check looks for precise wording so do keep that in mind.
