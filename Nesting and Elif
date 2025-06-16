@@ -1,0 +1,17 @@
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+
+if height >= 120:
+    print("You can ride the rollercoaster")
+    age = int(input("What is your age? "))
+    if age <= 12:  # Condition 1 - 12 or younger
+        print("You must pay $5 for entry")
+    elif age <= 18:  # Condition 2 - Only applies when the first is not true. Will work for 13-18.
+        print("You must pay $7 for entry")
+    elif age == 22:  # Just a for fun condition to see if I got this right
+        print("You must pay $22 for entry :^)")
+    else:  # Condition 3 will apply when neither of the statements in the nested block are true.
+        print("You must pay $12 for entry")
+else:   # This will happen if the person is too short
+    print("Sorry you have to grow taller before you can ride.")
+# Essentially you can add as many elifs as you want.
