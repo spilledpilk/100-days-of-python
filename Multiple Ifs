@@ -1,0 +1,32 @@
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+
+if height >= 120:
+    print("You can ride the rollercoaster")
+    age = int(input("What is your age? "))
+    if age <= 12:
+        bill += 5   # Adding a print(bill) after this will confirm this is good
+        print("Child tickets are $5")
+    elif age <= 18:
+        bill += 7   # Adding a print(bill) after this will confirm this is good
+        print("Youth tickets are $7.")
+    else:
+        bill += 12   # Adding a print(bill) after this will confirm this is good
+        print("Adult tickets are $12.")
+#  This next input for the multiple ifs to work should be included on the same level as the above.
+#  Technically not the same block. Just the same indentation level.
+    wants_photo = input("Do you want a photo taken? Type Y for Yes and N for No: ")
+    if wants_photo == "Y":
+        # Add $3 to their bill
+        # Instead of using print statements, we're going to turn bill into an int variable.
+#        bill += 3
+#        print(bill)
+#    else:
+#        bill += 0
+#        print(bill)
+# Here's a slightly better way to do it:
+        bill += 3   # Indentation matters a huge deal.
+    print(f"Your final bill is ${bill}!")  # This will effectively occur after the above if statement
+else:
+    print("Sorry you have to grow taller before you can ride.")
