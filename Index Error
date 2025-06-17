@@ -1,0 +1,47 @@
+states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland",
+                     "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island",
+                     "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois",
+                     "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin",
+                     "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado",
+                     "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma",
+                     "New Mexico", "Arizona", "Alaska", "Hawaii"]
+
+#print(states_of_america) # As you know, there are 51 states, but if you didn't, use len.
+#print(len(states_of_america)) # Tells us the length of this variable.
+# Coincidentally I guess that there are actually 50 states so it was good I used this.
+#print(states_of_america[49]) # This will give us Hawaii.
+# But what if we went beyond that?
+#print(states_of_america[50]) # This will give us an IndexError. We start counting from 0-49.
+# It's beyond Hawaii and there's nothing there. Out of range.
+# When we're working with large amounts of data and we're not actually looking at it, it can be
+# easy to get lost. Very frequently get off by one errors.
+
+num_of_states = len(states_of_america) # 50 -> 49
+#print(states_of_america[num_of_states -1]) # Receive the same error unless you add the -1.
+# Okay, I understand now. See what happened was this. Len, when it counted the number of states
+# gave us a number of 50. Therefore, the variable num_of_states became 50.
+# The print command following that printed the states_of_america variable while searching the
+# index for the 50th one, as specified by the square brackets and the num_of_states variable.
+# To fix this, we have to use -1 to get Hawaii since it's out of range.
+
+
+#dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Pears", "Cucumbers", "Cherries", "Tomatoes", "Celery", "Potatoes", "Grapes"]
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+# We could make two lists to separate them, but they kinda have a relationship since they
+# are all on the list of high pesticide foods.
+# Well, that's what's called a nested list.
+
+dirty_dozen = [fruits, vegetables] # This list contains the two lists above
+#print(dirty_dozen)
+
+#[['Strawberries', 'Nectarines', 'Apples', 'Grapes', 'Peaches', 'Cherries', 'Pears'], ['Spinach', 'Kale', 'Tomatoes', 'Celery', 'Potatoes']]
+# The brackets indicate each list.
+
+#Quiz
+#print(dirty_dozen[0]) # This will give me the fruits list.
+#print(dirty_dozen[1]) # This will give me the vegetables list.
+print(dirty_dozen[1][2]) # Oh, okay. I think I get it. This pulled up vegetables and tomatoes
+print(dirty_dozen[1][3]) # This will pull up celery. Yup
